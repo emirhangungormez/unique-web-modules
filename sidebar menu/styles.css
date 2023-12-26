@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    background: #000;
+    color: #fff;
+    font-family: "Neue Montreal"
+}
+
+.container {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: url(./image.jpg) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    padding: 1.5em;
+}
+
+nav > div {
+    flex: 1;
+}
+
+.cta {
+    text-align: center;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2em;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.hero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 1.5em;
+    width: 25%;
+}
+
+.hero h1 {
+    font-size: 40px;
+    font-weight: 400;
+    margin-bottom: 10px;  
+}
+
+.hero p {
+    color: #a0a0a0;
+    line-height: 1.5;
+}
+
+i {
+    position: relative;
+}
+
+.overlay-toggle {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 250px;
+    height: 150px;
+    margin: 0.75em;
+    padding: 1em;
+    border-radius: 0.5em;
+    background: #fff;
+    color: #000;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 30vw;
+    height: 100vh;
+    padding: 0.75em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.card {
+    position: relative;
+    right: -110%;
+    padding: 1em;
+    flex: 1;
+    background: #fff;
+    color: #000;
+    border-radius: 0.5em;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.card:nth-child(1) .card-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.close-btn {
+    position: relative;
+    font-size: 60px;
+    transform: scale(0);
+    transition: transform 0.3s;
+    transform-origin: center;
+}
+
+.card:nth-child(1):hover .close-btn{
+    transform: scale(1);
+}
+
+.card-title {
+    font-size: 50px;
+    letter-spacing: -0.035em;
+}
+
+.card-copy {
+    position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+    font-size: 15px;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.card:hover {
+    background: #020844;
+    color: #fff;
+}
+
+.card:hover .card-copy {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+@media(max-width:900px) {
+    .hero {
+        width: 100%;
+        top: 25%;
+    }
+
+    .sidebar {
+        width: 100vw;
+    }   
+}
