@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Neue Motreal";
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    z-index: 1;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+p {
+    pointer-events: none;
+    font-weight: 500;
+    font-size: 19px;
+    line-height: 1.15;
+}
