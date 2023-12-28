@@ -1,0 +1,197 @@
+:root {
+    --bg: #0f0f0f;
+    --text: #a5a4a5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    width: 100vw;
+    height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Oswald";
+}
+
+.bubbles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 450px;
+    height: 600px;
+    background: url(./bubbles.png) no-repeat 50% 50%;
+    /* background-size: cover; */
+    mix-blend-mode: difference;
+    transform-origin: center;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-family: "Oswald";
+    font-size: 100px;
+    font-weight: 400;
+    line-height: 100%;
+    
+}
+
+p {
+    text-transform: uppercase;
+    font-size: 14px;
+    line-height: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var(--text);
+}
+
+.logo {
+    position: fixed;
+    font-size: 2rem;
+}
+
+.logo a {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.logo .logo-revealer {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+.contact {
+    position: fixed;
+    right: 0;
+    font-size: 2rem;
+}
+
+.contact a {
+    position: relative;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.contact .contact-revealer {
+    position: absolute;
+    top: 25px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+.hero {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.hero > div {
+    display: flex;
+    flex-direction: column;
+    padding: 15rem 5rem 5rem 5rem;
+}
+
+.header {
+    flex: 3;
+}
+
+.copy {
+    flex: 2;
+}
+
+.hero .header .row {
+    position: relative;
+}
+
+.hero .header .row h1 {
+    position: relative;
+}
+
+.hero .header .row .h1-revealer {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+.copy-top .row, .copy-bottom .row {
+    position: relative;
+}
+
+.copy-top .row p, .copy-bottom .row p {
+    position: relative;
+}
+
+.copy-top .row .p-prevealer, .copy-bottom .row .p-prevealer {
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: var(--bg);
+}
+
+.pre-loader {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    z-index: 2;
+}
+
+.loader-wrapper {
+    position: relative;
+    width: 5px;
+    height: 100px;
+    background: rgba(240, 240, 240, 0.25);
+    overflow: hidden;
+    transform: rotate(40deg);
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    width: 120%;
+    height: 120%;
+    background: var(--bg);
+}
+
+@media (max-width: 900px) {
+    .hero{
+        flex-direction: column,;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .h1-revealer, .p-prevealer, .logo-revealer, .contact-revealer {
+        display: none;
+    }
+
+    .hero > div {
+        padding: 8rem 4rem 2rem 4rem;
+    }
+}
+
+
