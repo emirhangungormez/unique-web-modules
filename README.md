@@ -1,6 +1,6 @@
 # Unique Web Modules
 
-This modules is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript.
+This modules is a fully responsive personal portfolio website, responsive for all devices, built using HTML, CSS, and JavaScript (Barba.js).
 
 ## Installing unique-web-modules
 
